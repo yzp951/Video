@@ -7,7 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <Button HorizontalAlignment="Center" Click="Button_Click">打开音频</Button>
+        <TextBlock HorizontalAlignment="Center" Name="OutputTextBlock"/>
+        <MediaElement  x:Name="mediaPlayer"
+               HorizontalAlignment="Center"
+               AutoPlay="True"
+               AreTransportControlsEnabled="True"
+               Width="800"
+               Height="600">
+            <MediaElement.TransportControls>
+                <MediaTransportControls IsCompact="False"/>
+            </MediaElement.TransportControls>
+        </MediaElement>
+    </StackPanel>
+    
 </Page>
